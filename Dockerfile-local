@@ -1,0 +1,9 @@
+FROM eclipse-temurin:21-jdk-alpine
+WORKDIR /api
+COPY mvnw .
+COPY .mvn .mvn
+COPY pom.xml .
+RUN ./mvnw dependency:go-offline
+COPY src src
+COPY .env .env
+CMD ["./mvnw", "spring-boot:run", "-Dspring-boot.run.jvmArguments=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005"]
