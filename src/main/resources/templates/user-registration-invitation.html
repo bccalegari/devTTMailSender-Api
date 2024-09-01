@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ativação de Conta - devTT</title>
+</head>
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0;">
+<div style="width: 100%; max-width: 600px; margin: 20px auto; background-color: #ffffff; padding: 30px;
+border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); text-align: center;">
+    <h1 style="color: #343a40; font-size: 28px; margin-bottom: 20px; font-weight: 600;">
+        Ativação de Conta e Definição de Senha
+    </h1>
+    <p style="color: #495057; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+        Olá <span th:text="${username}"></span>,
+    </p>
+    <p style="color: #495057; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+        Você está recebendo este e-mail porque
+        <span th:text="${creatorName}"></span>
+        criou um cadastro para você em nosso aplicativo.
+        Para finalizar a ativação da sua conta e definir sua senha, por favor, clique no botão abaixo:
+    </p>
+    <p>
+        <a th:href="@{${registrationLink}}" style="display: inline-block; padding: 12px 25px;
+            font-size: 16px; color: #ffffff; background-color: #007bff; text-decoration: none;
+            border-radius: 50px; transition: background-color 0.3s ease; margin: 0;
+            text-align: center;">
+            Definir senha
+        </a>
+    </p>
+    <p style="color: #495057; font-size: 16px;
+        line-height: 1.6; margin-bottom: 20px;">
+        Após definir sua senha, você poderá acessar o aplicativo de ponto utilizando seu endereço
+        de e-mail e a nova senha criada.
+    </p>
+    <p style="color: #495057; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+        Se você tiver qualquer dúvida ou encontrar dificuldades durante o processo,
+        nossa equipe de suporte está à disposição para ajudar.
+        Entre em contato conosco através do e-mail:
+        <a href="mailto:devttsup@devtt.com" style="color: #007bff; text-decoration: none;">devttsup@devtt.com</a>.</p>
+    <p style="font-size: 14px; color: #6c757d; margin-top: 20px;">Atenciosamente,<br>Equipe devTT</p>
+</div>
+</body>
+</html>
